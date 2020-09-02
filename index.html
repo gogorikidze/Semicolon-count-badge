@@ -20,7 +20,7 @@ let fullfield = document.getElementById('full');
 let img = document.getElementById('preview');
 let url = document.getElementById('link');
 function generate(){
-  fullfield.value = userfield.value + '/' + repofield.value + '/' + branchfield.value + '/' + pathfield.value;
+  fullfield.innerText = userfield.value + '/' + repofield.value + '/' + branchfield.value + '/' + pathfield.value;
   let src = "http://gogorikidze.com/semicolon/badge.php?user="+userfield.value+"&repo="+repofield.value+"&branch="+branchfield.value+"&path="+pathfield.value;
   img.src = src;
   url.value = src;
