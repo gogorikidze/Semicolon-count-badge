@@ -1,18 +1,28 @@
-<script type="text/javascript">
-function generate(){
-
-}
-</script>
 <center>
   <h3>Semicolon Count Badge for a single file in GitHub repo</h3>
   <p>User: <input id="user" placeholder="gogorikidze" type="text"></input></p>
-  <p>Repo: <input id="repo" placeholder="three.php" type="text"></input></p>
+  <p>Repo: <input id="repo" placeholder="semicolon-count-badge" type="text"></input></p>
   <p>Branch: <input id="branch" placeholder="master" value="master" type="text"></input></p>
-  <p>filename: <input id="filename" placeholder="three.php" type="text"></input></p>
+  <p>filepath: <input id="filepath" placeholder="badge.php" type="text"></input></p>
   <button onclick="generate()">Generate Badge</button>
   <br></br>
-  <text id="full" style="color:gray">gogorikidze/three.php/master/three.php</text>
+  <text id="full" style="color:gray">gogorikidze/semicolon-count-badge/master/badge.php</text>
   <br></br>
-  <img src="badge.php" id="preview">
-  <p>Badge url: <input style="width: 500px" type="textarea" id="link" readonly><p>
+  <img src="http://gogorikidze.com/semicolon/badge.php?user=gogorikidze&repo=semicolon-count-badge&branch=master&path=badge.php" id="preview">
+  <p>Badge IMG url: <input style="width: 750px" type="textarea" id="link" value="http://gogorikidze.com/semicolon/badge.php?user=gogorikidze&repo=semicolon-count-badge&branch=master&path=badge.php" readonly><p>
 </center>
+<script type="text/javascript">
+let userfield = document.getElementById('user');
+let repofield = document.getElementById('repo');
+let branchfield = document.getElementById('branch');
+let pathfield = document.getElementById('filepath');
+let fullfield = document.getElementById('full');
+let img = document.getElementById('preview');
+let url = document.getElementById('link');
+function generate(){
+  let full = userfield.value + '/' + repofield.value + '/' + branchfield.value + '/' + pathfield.value;
+  let src = "http://gogorikidze.com/semicolon/badge.php?user="+userfield.value+"&repo="+repofield.value+"&branch="+branchfield.value+"&path="+pathfield.value;
+  img.src = src;
+  url.value = src;
+}
+</script>
