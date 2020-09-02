@@ -1,0 +1,18 @@
+<script type="text/javascript">
+function generate(){
+
+}
+</script>
+<center>
+  <h3>Semicolon Count Badge for a single file in GitHub repo</h3>
+  <p>User: <input id="user" placeholder="gogorikidze" type="text"></input></p>
+  <p>Repo: <input id="repo" placeholder="three.php" type="text"></input></p>
+  <p>Branch: <input id="branch" placeholder="master" value="master" type="text"></input></p>
+  <p>filename: <input id="filename" placeholder="three.php" type="text"></input></p>
+  <button onclick="generate()">Generate Badge</button>
+  <br></br>
+  <text id="full" style="color:gray">gogorikidze/three.php/master/three.php</text>
+  <br></br>
+  <img src="badge.php" id="preview">
+  <p>Badge url: <input style="width: 500px" type="textarea" id="link" readonly><p>
+</center>
